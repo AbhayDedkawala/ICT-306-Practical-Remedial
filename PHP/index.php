@@ -21,7 +21,7 @@
         header("Location: /php/Register.php");
 
     $ProfileImage = $Folder . basename($_FILES["Image"]["name"]);
-    $Resume = $Folder . basename($_FILES["Resume"]["Resume"]);
+    $Resume = $Folder . basename($_FILES["Resume"]["name"]);
 
     if (!preg_match("/^[a-zA-z]*$/", $_POST["FirstName"]))
         $Message = $Message . "<li>First Name must be contains only alphabets.</li>";
@@ -47,16 +47,16 @@
     move_uploaded_file($_FILES["Resume"]["tmp_name"], $Resume);
     ?>
 
-    <div class="container">
-        <h3 class="text-center my-5">Register</h3>
+    <div class="container text-center">
+        <h3 class="my-5">Profile Detail</h3>
 
-        <img src="<?php echo $ProfileImage ?>" alt="Profile Image" class="float-left" />
-        <b>First Name : </b> <?php echo $_POST["FirstName"] ?>
-        <b>Last Name : </b> <?php echo $_POST["LastName"] ?>
-        <b>Email : </b> <?php echo $_POST["Email"] ?>
-        <b>Contact No : </b> <?php echo $_POST["Contact"] ?>
-        <b>DOB : </b> <?php echo $_POST["DOB"] ?>
-        <b>Resume : </b> <a href="<?php echo $Resume ?>" target="_blank"></a>
+        <img src="<?php echo $ProfileImage ?>" alt="Profile Image" class="float-left img-fluid mb-3 w-50" />
+        <p><b>First Name : </b> <?php echo $_POST["FirstName"] ?></p>
+        <p><b>Last Name : </b> <?php echo $_POST["LastName"] ?></p>
+        <p><b>Email : </b> <?php echo $_POST["Email"] ?></p>
+        <p><b>Contact No : </b> <?php echo $_POST["Contact"] ?></p>
+        <p><b>DOB : </b> <?php echo $_POST["DOB"] ?></p>
+        <p><b>Resume : </b> <a href="<?php echo $Resume ?>" target="_blank">Resume</a></p>
     </div>
 </body>
 
