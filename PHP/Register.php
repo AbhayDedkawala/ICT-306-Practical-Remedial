@@ -61,8 +61,10 @@
             <?php
             session_start();
 
-            if (!empty($_SESSION["Message"]))
-                echo $_SESSION["Message"]
+            if (!empty($_SESSION["Message"])){
+                echo $_SESSION["Message"];
+                $_SESSION["Message"] = null;
+            }
             ?>
         </ul>
     </div>

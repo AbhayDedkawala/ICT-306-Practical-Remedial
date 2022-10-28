@@ -33,7 +33,6 @@ const FileOption = multer.diskStorage({
     destination: "./Images",
     filename: (request, file, callback) => {
         FileName = Date.now() + path.extname(file.originalname);
-        console.log(FileName);
         return callback(null, FileName);
     }
 })
