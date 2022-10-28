@@ -37,12 +37,12 @@ Here is the Node JS & PHP assignment work.
 **PHP**
 
     URL : http://localhost/php/Register.php
-    Wrong data
+    Invalid data
 
 ![Register](/Images/PHP%20-%20Profile%20-%20Wrong%20Data.png)
 
     URL : http://localhost/php/Register.php
-    Wrong data message & valid data
+    Invalid data error message & valid data
 
 ![Register](/Images/PHP%20-%20Profile%20-%20Valid%20Data.png)
 
